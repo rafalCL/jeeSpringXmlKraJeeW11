@@ -3,6 +3,10 @@ package pl.coderslab.spring.zad2;
 public class HelloWorldZad2 {
     private String message;
 
+    public HelloWorldZad2() {
+        this.message = message;
+    }
+
     public HelloWorldZad2(String message) {
         this.message = message;
     }

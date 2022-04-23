@@ -6,4 +6,9 @@
     <bean name="zad2HelloWorld" class="pl.coderslab.spring.zad2.HelloWorldZad2">
         <constructor-arg value="MeSsAgE"/>
     </bean>
+
+<!--    poniższy bean jest do zadania 3 (mimio iż w pliku zad2) ;) -->
+    <bean name="zad3HelloWorldBySetter" class="pl.coderslab.spring.zad2.HelloWorldZad2">
+<property name="message" value="otherMessage"/>
+    </bean>
 </beans>
