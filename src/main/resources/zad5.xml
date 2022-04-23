@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="emailService" class="pl.coderslab.spring.zad5.EmailService">
+    </bean>
+    <bean name="smsService" class="pl.coderslab.spring.zad5.SmsService">
+    </bean>
+
+    <bean name="emailSender" class="pl.coderslab.spring.zad5.MessageSender">
+        <constructor-arg ref="emailService"/>
+        <constructor-arg value="email text"/>
+    </bean>
+
+    <bean name="smsSender" class="pl.coderslab.spring.zad5.MessageSender">
+        <constructor-arg name ="service" ref="smsService"/>
+        <constructor-arg name="messageText" value="SMS text"/>
+    </bean>
+</beans>
